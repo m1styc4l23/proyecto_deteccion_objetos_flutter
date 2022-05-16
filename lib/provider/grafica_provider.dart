@@ -11,7 +11,6 @@ class GraficaProvider extends ChangeNotifier {
     try {
       final db = await DBProvider.db.database;
 
-      print('lol $messageMqtt');
 
       var mosquitto = messageMqtt.split(',');
 
@@ -20,7 +19,7 @@ class GraficaProvider extends ChangeNotifier {
         'fecha': mosquitto[1],
         'conteo': mosquitto[0],
       });
-      //
+
       // db.delete('conteo');
 
       //select
